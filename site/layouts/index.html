@@ -1,8 +1,11 @@
 {{ define "main" }}
 
-<h1>Hugo with Webpack, Sass, and PostCSS</h1>
+{{ $projectId := "4f269c44-7965-00cd-7bf6-595a80bc29e6" }}
+{{ $itemQueryURL := print "https://deliver.kontent.ai/" $projectId "/items/about" }}
+{{ $aboutItemResponse := getJSON $itemQueryURL }}
 
-<h3>Hooray 🎉 - you've built this with <a href="https://github.com/netlify/victor-hugo">Victor-Hugo</a>!</h3>
+<h1>{{ $aboutItemResponse.item.elements.title.value }}</h1>
+{{ $aboutItemResponse.item.elements.content.value | safeHTML }}
 
 <a href="{{ "/tech" | relURL }}">Check out the tech</a>
 

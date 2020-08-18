@@ -2,13 +2,22 @@
 
 **A Hugo boilerplate for creating truly epic websites**
 
-This is a boilerplate for using [Hugo](https://gohugo.io/) as a static site generator and [Webpack](https://webpack.js.org/) as your asset pipeline.
+This is a boilerplate for using [Hugo](https://gohugo.io/) as a static site generator and [Webpack](https://webpack.js.org/) as your asset pipeline. This project showcases getting content from the headless CMS [Kontent](), based on the original [project](https://github.com/netlify-templates/victor-hugo) by [netlify-templates](https://github.com/netlify-templates).
 
 Victor Hugo setup to use [PostCSS](http://postcss.org/) and [Babel](https://babeljs.io/) for CSS and JavaScript compiling/transpiling.
 
 This project is released under the [MIT license](LICENSE). Please make sure you understand its implications and guarantees.
 
 ## Usage
+
+### Manage conten in Kontent CMS
+1. Login to [Kontent.ai](https://bit.ly/2YbV0gx) and create a new project.
+1. Use `projectId` of the newly created project in `site/layouts/index.html`.
+1. Create `About` Content type in Kontent.ai with `About` name.
+1. Add the `Title` Text Element.
+1. Add the `Content` Rich Text Element.
+1. Create an item named `About` based in this Kontent type.
+1. After running the site, content from Kontent.ai will be fetched and used on the `About` page.
 
 ### :exclamation: Prerequisites
 
